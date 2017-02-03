@@ -1,6 +1,8 @@
+const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
+
 const logger = require('winston');
 const TelegramBot = require('node-telegram-bot-api');
-const telegram = new TelegramBot('327906774:AAFg8JMzMV17w76ag5hb6b9EzVqVDWgjTbw', { polling: true });
+const telegram = new TelegramBot(TELEGRAM_TOKEN, { polling: true });
 const Brain = require('./brain');
 
 telegram.onText(/^\/status/, (message) => {
