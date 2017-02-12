@@ -49,7 +49,7 @@ const register = (telegram, { message, timeout = DEFAULT_TIMEOUT }) => {
   if (players.length >= PLAYERS_REQUIRED) {
     logger.info(`${PLAYERS_REQUIRED} players registered, notifying and resetting`);
     const usernames = players.map(u => `@${u.username}`).join(', ');
-    telegram.sendMessage(message.chat.id, `Letc's go, ${usernames}!`);
+    telegram.sendMessage(message.chat.id, `Letc's go, chop chop! ${usernames}!`);
     players = [];
   }
 };
